@@ -1,0 +1,82 @@
+h1, h2, h3{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    color: teal;
+}
+body{
+    color: white;
+    background-color: rgba(28, 33, 37, 0.955);
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+}
+
+/* HEADER */
+#header{
+    width: 100vw;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    height: 10vh;
+    background-color: rgba(28, 33, 37, 1);
+    z-index: 99;
+}
+
+
+#header h2{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: .75em;
+}
+
+#body{
+    position: relative;
+    top: 10vh;
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+}
+#body div{
+    padding-top: .25em;
+}
+#about-me{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-end;
+    
+}
+#about-content{
+    width: 60vw;
+    margin-bottom: 7em;
+}
+#about-text{
+    display: flex;
+    flex-direction: row;
+}
+#body h2{
+    font-size: .75em;
+}
+#body p{
+    font-size: 1em;
+}
+
+#header-body-wrapper{
+    min-height: calc(100vh - 8vh)
+}
+
+#footer{
+    height: 7vh;
+}
