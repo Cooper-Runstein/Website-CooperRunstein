@@ -1,5 +1,6 @@
 <!doctype <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,28 +10,40 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
+
 <body>
     <div id="wrapper">
         <div id="header-body-wrapper">
             <div id="header">
                 <h2>Cooper Runstein</h2>
-                <nav><a href=#>Me</a><a href=#>Projects</a><a href=#>Skills</a></nav>
+                <nav>
+                    <a href=#>Me</a>
+                    <a href=#>Projects</a>
+                    <a href=#>Skills</a>
+                </nav>
             </div>
             <div id="body">
                 <div id="about-me">
                     <h1>Cooper Runstein</h1>
-                    <div id="about-content" >
+                    <div id="about-content">
                         <h2>About Me</h2>
                         <div id="about-text">
-                            <p>Hi, I'm Cooper Runstein, a software developer from Portland, OR. Currently I live in Eugene, OR while I attend University of Oregon. My software interests are in web development, both frontend and backend.</p>
-                            <p>I mostly work with Javascript and Python, though I'm interested in expanding into new lanaguages when the opportunity arises. Currently my main venture is <a href='http://spotcheckparking.com/'>SpotCheck Parking</a>, a machine vision startup. </p>
+                            <p>Hi, I'm Cooper Runstein, a software developer from Portland, OR. Currently I live in Eugene,
+                                OR while I attend University of Oregon. My software interests are in web development, both
+                                frontend and backend. Right now React and Vue.js have captured my intrest.</p>
+                            <p>I mostly work with Javascript and Python, though I'm interested in expanding into new lanaguages
+                                when the opportunity arises. Currently my main venture is
+                                <a href='http://spotcheckparking.com/'>SpotCheck Parking</a>, a machine vision startup.
+                            I particularly enjoy testing and debugging code.</p>
                         </div>
                     </div>
                 </div>
                 <div id="work">
                     <h2>My Work</h2>
                     <ul>
-                        <li v-for="project in projects">{{project.name}} <a v-bind:href="project.src">{{project.name2}}</a></li>
+                        <li v-for="project in projects">{{project.name}}
+                            <a v-bind:href="project.src">{{project.projectTitle}}</a>
+                        </li>
                     </ul>
                 </div>
                 <div id="skills">
@@ -39,31 +52,42 @@
                         <li>CSS and HTML including SASS, and CSS Grid, my personal favorite CSS tool.</li>
                         <li>Javascript as a frontend including React and Vue, as well as a backend with Node and Express.</li>
                         <li>Python, used with machine learning tools like Tensorflow and Keras, as well as backend Django.</li>
-                        <li>A whole host of developer tools: Git, Gulp, Webpack, Babel.</li>
+                        <li>A whole host of developer tools: Git, Gulp, Webpack, Babel, PipEnv, and more.</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div id="footer">
-            <div id="contact"><h3>Contact Me</h3><p>cooperun@gmail.com</p></div><p>This Site Made with Vue.js</p>
+            <div id="contact">
+                <h3>Contact Me</h3>
+                <p>cooperun@gmail.com</p>
+            </div>
+            <p>This Site Made with Vue.js</p>
         </div>
 
-    </div> 
+    </div>
     <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
     <script>
+        var isIE = /*@cc_on!@*/false || !!document.documentMode;
+        if (isIE){
+            alert("You are using Internet Explorer. Be warned, this site is not optimized for outdated browsers.")
+        }
         var app = new Vue({
             el: "#work",
             data: {
                 message: "Hello World",
                 projects: [
-                    {name:"First React Project -->  ", src:'https://github.com/Cooper-Runstein/NBA-App-Learn-React/tree/6984cc8b19e412b51d5d2299862ce2e8750e9067',  id:1, name2:"NBA Stat Comparison"},
-                    {name:"First AJAX Project -->  ", src:'https://github.com/Cooper-Runstein/MLB-Players-App',  id:2, name2:"MLB Player Search App"},
-                    {name:"First big Javascript Project -->  ", src:'https://github.com/Cooper-Runstein/Liars-dice',  id:3, name2:"Liar's Dice Game"}
+                    { name: "First React Project -->  ", src: 'https://github.com/Cooper-Runstein/NBA-App-Learn-React/tree/6984cc8b19e412b51d5d2299862ce2e8750e9067', id: 1, projectTitle: "NBA Stat Comparison" },
+                    { name: "First AJAX Project -->  ", src: 'https://github.com/Cooper-Runstein/MLB-Players-App', id: 2, projectTitle: "MLB Player Search App" },
+                    { name: "This Website's code -->  ", src: 'https://github.com/Cooper-Runstein/Website-CooperRunstein',id: 5, projectTitle: "CooperRunstein.com"},
+                    { name: "First Big Javascript Project -->  ", src: 'https://github.com/Cooper-Runstein/Liars-dice', id: 3, projectTitle: "Liar's Dice Game" },
+                    { name: "First Big Python Project -->  ", src: 'https://github.com/Cooper-Runstein/Python-Payment-Determination-App', id: 4, projectTitle: "Roomate Payments App" }
 
                 ],
             }
         })
-    
+
     </script>
 </body>
+
 </html>

@@ -89,7 +89,7 @@ nav a{
 
 #about-content{
     width: 45vw;
-    margin-bottom: 7em;
+    
 }
 #about-text{
     display: flex;
@@ -108,11 +108,8 @@ nav a{
     font-size: 1em;
 }
 
-#header-body-wrapper{
-    /* min-height: calc(100vh - 8vh) */
-}
-
 #footer{
+    position: relative;
     height: 7vh;
     display: flex;
     flex-direction: row;
