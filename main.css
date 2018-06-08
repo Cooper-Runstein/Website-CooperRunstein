@@ -25,6 +25,10 @@ a:hover{
 button{
     background:  teal;
 }
+button:hover{
+    cursor: pointer;
+    background:  rgba(120, 62, 143, 0.74);
+}
 
 body{
     color: white;
@@ -116,6 +120,9 @@ nav a{
 #skills-title{
     grid-column-start: 1;
     grid-column-end: 3;
+}
+#skills-list li{
+    list-style: circle;
 }
 #footer{
     height: 7vh;
