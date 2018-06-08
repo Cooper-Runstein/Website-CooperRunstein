@@ -22,6 +22,9 @@ a:active{
 a:hover{
     color: rgba(120, 62, 143, 0.74);
 }
+button{
+    background:  teal;
+}
 
 body{
     color: white;
@@ -29,10 +32,11 @@ body{
     margin: 0;
     padding: 0;
     font-size: 25px;
-    max-height: 3vh;
     font-family: VT323, monospace;
 }
-
+/* #body-header-wrapper{
+    display: flex;
+} */
 /* HEADER */
 #header{
     width: 100vw;
@@ -77,13 +81,10 @@ nav a{
 }
 #about-me, #work, #skills{
     position: relative;
-    /* top: position: relative;0; */
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    
     border-bottom: 1px solid white;
 }
 
@@ -107,9 +108,16 @@ nav a{
 #body p{
     font-size: 1em;
 }
-
+#skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+}
+#skills-title{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
 #footer{
-    position: relative;
     height: 7vh;
     display: flex;
     flex-direction: row;
