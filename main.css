@@ -54,6 +54,11 @@ body{
     font-size: .75em;
 }
 
+nav a{
+    padding-right: 1em;
+}
+
+/* BODY */
 #body{
     position: relative;
     top: 10vh;
