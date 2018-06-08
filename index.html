@@ -26,15 +26,13 @@
                         </div>
                     </div>
                 </div>
-                <div id="work-main">
+                <div id="work">
                     <h2>My Work</h2>
                     <ul>
-                        <li>Project 1</li>
-                        <li>Project 2</li>
-                        <li>Project 3</li>
+                        <li v-for="project in projects">{{project.name}} <a v-bind:href="project.src">{{project.name2}}</a></li>
                     </ul>
                 </div>
-                <div id="skills-main">
+                <div id="skills">
                     <h2>My Skills</h2>
                     <ul>
                         <li>Skill 1</li>
@@ -49,5 +47,21 @@
         </div>
 
     </div> 
+    <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#work",
+            data: {
+                message: "Hello World",
+                projects: [
+                    {name:"First React Project -->  ", src:'https://github.com/Cooper-Runstein/NBA-App-Learn-React/tree/6984cc8b19e412b51d5d2299862ce2e8750e9067',  id:1, name2:"NBA Stat Comparison"},
+                    {name:"First AJAX Project -->  ", src:'https://github.com/Cooper-Runstein/MLB-Players-App',  id:2, name2:"MLB Player Search App"},
+                    {name:"First big Javascript Project -->  ", src:'https://github.com/Cooper-Runstein/Liars-dice',  id:3, name2:"Liar's Dice Game"}
+
+                ],
+            }
+        })
+    
+    </script>
 </body>
 </html>
