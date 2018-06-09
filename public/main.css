@@ -144,11 +144,12 @@ nav a{
     grid-column-end: 3;
 }
 #skills-list{
-    padding-left: 3vw;
-    padding-right: 3vw;
+    /* padding-left: 3vw;
+    padding-right: 3vw; */
 }
 #skills-list li{
     list-style: circle;
+    list-style-position: inside;
 }
 #response{
     display: block;
