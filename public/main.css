@@ -106,7 +106,11 @@ nav a{
 }
 
 #about-content{
-    width: 80em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50vh;
     
 }
 #about-text{
@@ -173,5 +177,12 @@ nav a{
     }
     #about-text p{
         max-width: 90vw;
+    }
+    #skills{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 3fr;
+    }
+    #skills-title{
+        grid-column-end: 2;
     }
 }
