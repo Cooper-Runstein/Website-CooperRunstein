@@ -1,5 +1,5 @@
 
-request = require('./request.js');
+request = require('./request.js').request;
 
 var isIE = /*@cc_on!@*/false || !!document.documentMode;
 if (isIE){
@@ -29,6 +29,7 @@ var badges = new Vue({
     methods: {
         submit: function(){
             this.response = "Searching..."
+            request();
         }
     },
     
