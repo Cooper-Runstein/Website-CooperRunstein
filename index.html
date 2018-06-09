@@ -60,9 +60,10 @@
                     
                     <div id="treehouse-badges-wrapper">
                         <h3>My Treehouse Badges</h3>
-                        <form>
-                            <input type="text" placeholder="Search Treehouse Badges">
-                            <button>Search</button>
+                        <form v-on:submit.prevent="submit">
+                            <input type="text" placeholder="Search" v-model="Search">
+                            <input id="button" type="submit" value="Submit" >
+                            <span>{{response}}</span>
                         </form>
                     <ul>
 
@@ -87,7 +88,7 @@
         if (isIE){
             alert("You are using Internet Explorer. Be warned, this site is not optimized for outdated browsers.")
         }
-        var app = new Vue({
+        var work = new Vue({
             el: "#work",
             data: {
                 message: "Hello World",
@@ -100,6 +101,20 @@
 
                 ],
             }
+        })
+
+        var badges = new Vue({
+            el: "#skills",
+            data:{
+                Search: "",
+                response: "",
+            },
+            methods: {
+                submit: function(){
+                    this.response = "Searching..."
+                }
+            },
+            
         })
 
     </script>

@@ -22,10 +22,10 @@ a:active{
 a:hover{
     color: rgba(120, 62, 143, 0.74);
 }
-button{
+#button{
     background:  teal;
 }
-button:hover{
+#button:hover{
     cursor: pointer;
     background:  rgba(120, 62, 143, 0.74);
 }
