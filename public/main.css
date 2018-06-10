@@ -122,7 +122,7 @@ nav a{
 #about-text p{
     max-width: 25em;
     display: inline-block;
-    margin: auto;
+    /* margin: auto; */
 }
 
 #work ul{
