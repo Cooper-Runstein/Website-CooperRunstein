@@ -28,8 +28,9 @@ var badges = new Vue({
     },
     methods: {
         submit: function(){
-            this.response = "Searching..."
-            request();
+            this.response = "Searching...";
+            request(this.Search, ()=>{this.response=""})
+
         }
     },
     
