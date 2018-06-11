@@ -2,7 +2,12 @@
     font-family: WhiteRabbit;
     src: url('fonts/whitrabt.ttf') format('truetype');
 }
-
+html{
+    font-size: 10px;
+}
+div{
+    font-size: 3rem;
+}
 h1, h2, h3{
     padding: 0;
     margin: 0;
@@ -17,20 +22,20 @@ a{
     color: teal;
 }
 h1{
-    font-size: 8em;
+    font-size: 4rem;
 }
 h2{
-    font-size: 5em;
+    font-size: 3rem;
 }
 h3{
-    font-size: 4em;
+    font-size: 2.5rem;
 }
 p, li{
-    font-size: 3em;
+    font-size: 2rem;
 }
-/* a:active{
-    color: rgba(178, 112, 204, 0.671);
-} */
+ul{
+    margin: 0;
+}
 a:hover{
     color: rgba(37, 133, 13, 0.74);
 }
@@ -62,21 +67,18 @@ body{
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
-    height: 10em;
+    height: 10vh;
     background-color: rgb(92, 95, 95);
     z-index: 99;
 }
 
-
 #header h2{
-    margin-left: .25em;
-    margin-right: .25em;
-    font-size: 5em;
+    margin-left: .25rem;
+    margin-right: .25rem;
 }
 
 nav a{
-    padding-right: 1em;
-    font-size: 3em;
+    padding-right: .1rem;
 }
 
 /* BODY */
@@ -122,20 +124,15 @@ nav a{
 #about-text p{
     max-width: 25em;
     display: inline-block;
-    /* margin: auto; */
 }
 
 #work ul{
-    height: 55em;
+    min-height: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;
-}
-#work ul li{
-    
-   
 }
 
 #skills{
@@ -147,28 +144,24 @@ nav a{
     grid-column-start: 1;
     grid-column-end: 3;
 }
-#skills-list{
-    /* padding-left: 3vw;
-    padding-right: 3vw; */
-}
+
 #skills-list li{
     list-style: circle;
     list-style-position: inside;
+}
+#skills-list li:hover{
+    cursor: pointer;
 }
 #response{
     display: block;
 }
 
 #footer{
-    /* position: relative;
-    top: 10vh; */
     height: 20vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* padding-left: 10vw;
-    padding-right: 10vw; */
 }
 
 @media only screen and (max-width: 800px){
