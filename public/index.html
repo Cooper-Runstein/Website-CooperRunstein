@@ -50,15 +50,18 @@
                     <div id="skills-list-wrapper">
                         <h3>My Skills</h3>
                         <ul id="skills-list">
-                            <li>CSS and HTML including SASS, and CSS Grid, my personal favorite CSS tool.</li>
+                            <li v-on:click="show = 1">CSS and HTML including SASS, and CSS Grid, my personal favorite CSS tool.</li>
                             <li>Javascript as a frontend including React and Vue, as well as a backend with Node and Express.</li>
                             <li>Python, used with machine learning tools like Tensorflow and Keras, as well as backend Django.</li>
+                            <li>Database and server side tools including SQL and MongoDB.</li>
                             <li>A whole host of developer tools: Git, Gulp, Webpack, Babel, PipEnv, and more.</li>
                         </ul>
                     </div>
                     
                     <div id="treehouse-wrapper">
-                    
+                        <p  v-if="show === 1">
+                            YOYOYO
+                        </p>
                     </div>
                 </div>
             
@@ -75,7 +78,7 @@
 
     </div>
     <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
-    <script src="bundle.js" type="text/javascript"></script>
+    <script src="../src/main.js" type="text/javascript"></script>
 </body>
 
 </html>
