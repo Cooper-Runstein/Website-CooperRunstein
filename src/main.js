@@ -1,5 +1,4 @@
 
-request = require('./request.js').request;
 
 var isIE = /*@cc_on!@*/false || !!document.documentMode;
 if (isIE){
@@ -18,20 +17,4 @@ var work = new Vue({
             { name: "First Big Python Project -->  ", src: 'https://github.com/Cooper-Runstein/Python-Payment-Determination-App', id: 4, projectTitle: "Roomate Payments App" }
         ],
     }
-})
-
-var badges = new Vue({
-    el: "#skills",
-    data:{
-        Search: "",
-        response: "",
-    },
-    methods: {
-        submit: function(){
-            this.response = "Searching...";
-            request(this.Search, ()=>{this.response=""}).then(data => console.log(data))
-
-        }
-    },
-    
 })
