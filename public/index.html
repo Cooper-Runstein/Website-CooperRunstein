@@ -7,6 +7,8 @@
     <title>Cooper Runstein</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase|Josefin+Sans|Playfair+Display|Source+Serif+Pro" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
@@ -17,8 +19,8 @@
                 <h2>Cooper Runstein</h2>
                 <nav>
                     <a href=#>Me</a>
-                    <a href=#>Projects</a>
-                    <a href=#>Skills</a>
+                    <a href=#work>Projects</a>
+                    <a href=#skills>Skills</a>
                 </nav>
             </div>
             <div id="body">
@@ -60,12 +62,12 @@
                     
                     <div id="treehouse-wrapper">
                         <div>
-                            <div v-if="show === 1">
-                                <h3>CSS and HTML</h3>
-                                <p>I began learning CSS and HTML in fall 2017. I began with the base languages, and moved into more advanced areas quickly.</p>
-                                <p>I've used Bootstrap, Flexbox and Grid, though the new and modern Grid system is by far my favorite to work with.</p>
-                                <p>Recently I've picked up SASS basics to help build my style sheets quickly.</p>
-                            </div>
+                            <ul v-if="show === 1">
+                                <li><h3>CSS and HTML</h3></li>
+                                <li><p>I began learning CSS and HTML in fall 2017. I began with the base languages, and moved into more advanced areas quickly.</p></li>
+                                <li><p>I've used Bootstrap, Flexbox and Grid, though the new and modern Grid system is by far my favorite to work with.</p></li>
+                                <li><p>Recently I've picked up SASS basics to help build my style sheets quickly.</p></li>
+                            </ul>
                             <div v-if="show === 2">
                                 <h3>Javascript</h3>
                                 <p>I began learning Javascript around the same time as HTML and CSS and it quickly overtook Python as my favorite langauge.</p>

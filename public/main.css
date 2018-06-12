@@ -19,7 +19,7 @@ li{
     list-style: none;
 }
 a{
-    color: teal;
+    color: white;
 }
 h1{
     font-size: 4rem;
@@ -37,7 +37,7 @@ ul{
     margin: 0;
 }
 a:hover{
-    color: rgba(37, 133, 13, 0.74);
+    color: rgb(212, 10, 20);
 }
 #button{
     background:  teal;
@@ -48,12 +48,12 @@ a:hover{
 }
 
 body{
-    color: wheat;
-    background-color: rgba(28, 33, 37, 0.955);
+    color:  rgba(11, 236, 236, 0.74);
+    background-color: rgba(76, 80, 84, 0.955);
     margin: 0;
     padding: 0;
     font-size: 1vh;
-    font-family: VT323, monospace;
+    font-family: 'Josefin Sans', sans-serif;
 }
 /* #body-header-wrapper{
     display: flex;
@@ -143,6 +143,12 @@ nav a{
 #skills-title{
     grid-column-start: 1;
     grid-column-end: 3;
+}
+#skills ul{
+    min-height: 55vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 #skills-list li{

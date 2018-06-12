@@ -22,6 +22,6 @@ var work = new Vue({
 var skills = new Vue({
     el: "#skills",
     data: {
-        show: false,
+        show: 1,
     }
 })
