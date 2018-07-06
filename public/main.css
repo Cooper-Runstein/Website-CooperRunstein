@@ -1,48 +1,27 @@
+
 @font-face {
     font-family: WhiteRabbit;
     src: url('fonts/whitrabt.ttf') format('truetype');
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html{
     font-size: 10px;
 }
-div{
-    font-size: 3rem;
-}
-h1, h2, h3{
-    padding: 0;
-    margin: 0;
-}
-ul{
-    padding: 0;
-}
-li{
-    list-style: none;
-}
+
 a{
     color: white;
-}
-h1{
-    font-size: 4rem;
-}
-h2{
-    font-size: 3rem;
-}
-h3{
-    font-size: 2.5rem;
-}
-p, li{
-    font-size: 2rem;
-}
-ul{
-    margin: 0;
 }
 a:hover{
     color: rgb(212, 10, 20);
 }
-#button{
+.button{
     background:  teal;
 }
-#button:hover{
+.button:hover{
     cursor: pointer;
     background:   rgba(37, 133, 13, 0.74);
 }
@@ -55,11 +34,11 @@ body{
     font-size: 1vh;
     font-family: 'Josefin Sans', sans-serif;
 }
-/* #body-header-wrapper{
+/* .body-header-wrapper{
     display: flex;
 } */
 /* HEADER */
-#header{
+.header{
     width: 100vw;
     border-bottom: 1px solid white;
     display: flex;
@@ -72,33 +51,33 @@ body{
     z-index: 99;
 }
 
-#header h2{
+.header h2{
     margin-left: .25rem;
     margin-right: .25rem;
 }
 
-nav a{
+.header nav a{
     padding-right: .1rem;
 }
 
 /* BODY */
-#body{
+.body{
     position: relative;
     top: 10vh;
     width: 80vw;
     margin: auto;
     text-align: center;
 }
-#body div{
+.body div{
     padding-top: 0;
 }
-#about-me{
+.about-me{
     height: 90vh
 }
-#work, #skills{
+.work, .skills{
     height: 100vh;
 }
-#about-me, #work, #skills{
+.about-me, .work, .skills{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -107,7 +86,7 @@ nav a{
     border-bottom: 5px dashed rgba(163, 157, 149, 0.918);
 }
 
-#about-content{
+.about-content{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -115,18 +94,18 @@ nav a{
     height: 50vh;
     
 }
-#about-text{
+.about-text{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: stretch;
 }
-#about-text p{
+.about-text p{
     max-width: 25em;
     display: inline-block;
 }
 
-#work ul{
+.work ul{
     min-height: 55vh;
     display: flex;
     flex-direction: column;
@@ -135,34 +114,34 @@ nav a{
     position: relative;
 }
 
-#skills{
+.skills{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 5fr;
 }
-#skills-title{
+.skills-title{
     grid-column-start: 1;
     grid-column-end: 3;
 }
-#skills ul{
+.skills ul{
     min-height: 55vh;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
 
-#skills-list li{
+.skills-list li{
     list-style: circle;
     list-style-position: inside;
 }
-#skills-list li:hover{
+.skills-list li:hover{
     cursor: pointer;
 }
-#response{
+.response{
     display: block;
 }
 
-#footer{
+.footer{
     height: 20vh;
     display: flex;
     flex-direction: row;
@@ -171,17 +150,27 @@ nav a{
 }
 
 @media only screen and (max-width: 800px){
-    #about-text{
+    .about-text{
         flex-direction: column;
     }
-    #about-text p{
+    .about-text p{
         max-width: 90vw;
     }
-    #skills{
+    .skills{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 3fr 3fr;
     }
-    #skills-title{
+    .skills-title{
         grid-column-end: 2;
     }
+}
+
+.isActive{
+    border-right: red 3px solid;
+    font-weight: bold;
+}
+
+.treehouse-wrapper ul h3{
+    text-decoration-line: underline;
+    text-decoration-color: red;
 }

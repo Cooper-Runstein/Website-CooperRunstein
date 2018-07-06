@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <div id="wrapper">
-            <div id="header">
+    <div class="wrapper">
+            <div class="header">
                 <h2>Cooper Runstein</h2>
                 <nav>
                     <a href=#>Me</a>
@@ -23,12 +23,12 @@
                     <a href=#skills>Skills</a>
                 </nav>
             </div>
-            <div id="body">
-                <div id="about-me">
+            <div class="body">
+                <div id="about-me" class="about-me">
                     <h1>Cooper Runstein</h1>
-                    <div id="about-content">
+                    <div class="about-content">
                         <h2>About Me</h2>
-                        <div id="about-text">
+                        <div class="about-text">
                             <p>Hi, I'm Cooper Runstein, a software developer from Portland, OR. Currently I live in Eugene,
                                 OR while I attend University of Oregon. My software interests are in web development, both
                                 frontend and backend. Right now React and Vue.js have captured my intrest.</p>
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="work">
+                <div id="work" class="work">
                     <h2>My Work</h2>
                     <ul>
                         <li v-for="project in projects">{{project.name}}
@@ -47,20 +47,20 @@
                         </li>
                     </ul>
                 </div>
-                <div id="skills">
-                    <h2 id="skills-title">Skills</h2>
-                    <div id="skills-list-wrapper">
+                <div id="skills" class="skills">
+                    <h2 class="skills-title">Skills</h2>
+                    <div class="skills-list-wrapper">
                         <h3>My Skills</h3>
-                        <ul id="skills-list">
-                            <li v-on:click="show = 1">CSS and HTML including SASS, and CSS Grid, my personal favorite CSS tool.</li>
-                            <li v-on:click="show = 2">Javascript as a frontend including React and Vue, as well as a backend with Node and Express.</li>
-                            <li v-on:click="show = 3">Python, used with machine learning tools like Tensorflow and Keras, as well as backend Django.</li>
-                            <li v-on:click="show = 4">Database and server side tools including SQL and MongoDB.</li>
-                            <li v-on:click="show = 5">A whole host of developer tools: Git, Gulp, Webpack, Babel, PipEnv, and more.</li>
+                        <ul class="skills-list">
+                            <li v-on:click="show = 1" v-bind:class="{ isActive: show === 1 }">CSS and HTML including SASS, and CSS Grid, my personal favorite CSS tool.</li>
+                            <li v-on:click="show = 2" v-bind:class="{ isActive: show === 2 }">Javascript as a frontend including React and Vue, as well as a backend with Node and Express.</li>
+                            <li v-on:click="show = 3" v-bind:class="{ isActive: show === 3 }">Python, used with machine learning tools like Tensorflow and Keras, as well as backend Django.</li>
+                            <li v-on:click="show = 4" v-bind:class="{ isActive: show === 4 }">Database and server side tools including SQL and MongoDB.</li>
+                            <li v-on:click="show = 5" v-bind:class="{ isActive: show === 5 }">A whole host of developer tools: Git, Gulp, Webpack, Babel, PipEnv, and more.</li>
                         </ul>
                     </div>
                     
-                    <div id="treehouse-wrapper">
+                    <div class="treehouse-wrapper">
                         <div>
                             <ul v-if="show === 1">
                                 <li><h3>CSS and HTML</h3></li>
@@ -68,12 +68,12 @@
                                 <li><p>I've used Bootstrap, Flexbox and Grid, though the new and modern Grid system is by far my favorite to work with.</p></li>
                                 <li><p>Recently I've picked up SASS basics to help build my style sheets quickly.</p></li>
                             </ul>
-                            <div v-if="show === 2">
+                            <ul v-if="show === 2">
                                 <h3>Javascript</h3>
-                                <p>I began learning Javascript around the same time as HTML and CSS and it quickly overtook Python as my favorite langauge.</p>
-                                <p>I've began using React and Vue as frotend technologies while experimenting with Node as a backend.</p>
-                                <p>Tensorflow.js has made my affection for JS even stronger and I have a few web-based machine learning projects planned out.</p>
-                            </div>
+                                <li><p>I began learning Javascript around the same time as HTML and CSS and it quickly overtook Python as my favorite langauge.</p></li>
+                                <li><p>I've began using React and Vue as frotend technologies while experimenting with Node as a backend.</p></li>
+                                <li><p>Tensorflow.js has made my affection for JS even stronger and I have a few web-based machine learning projects planned out.</p></li>
+                            </ul>
                             <div v-if="show === 3">
                                 <h3>Python</h3>
                                 <p>I began learning Python out of intrest in economic data science as a college Freshman, and instantly loved the langauge more than my own field of study.</p>
@@ -101,8 +101,8 @@
                 </div>
             
     
-            <div id="footer">
-                <div id="contact">
+            <div class="footer">
+                <div class="contact">
                     <h3>Contact Me</h3>
                     <p>cooperun@gmail.com</p>
                 </div>
