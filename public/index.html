@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase|Josefin+Sans|Playfair+Display|Source+Serif+Pro" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
 </head>
 
 <body>
@@ -19,61 +19,62 @@
                 <h2>Cooper Runstein</h2>
                 <nav>
                     <a href=#>Me</a>
-                    <a href=#work>Projects</a>
+                    <a href="#work" v-scroll-to="#work"> Projects</a>
                     <a href=#skills>Skills</a>
                 </nav>
             </div>
             <div class="body">
                 <div id="about-me" class="about-me">
-                    <h1>Cooper Runstein</h1>
                     <div class="about-content">
-                        <h2>About Me</h2>
+                        <h2 class="section-title">About Me</h2>
                         <div class="about-text">
-                            <p>Hi, I'm Cooper Runstein, a software developer from Portland, OR. Currently I live in Eugene,
-                                OR while I attend University of Oregon. My software interests are in web development, both
-                                frontend and backend. Right now React and Vue.js have captured my intrest.</p>
-                            <p>I mostly work with Javascript and Python, though I'm interested in expanding into new lanaguages
+                            <p class="text-block">Hello, I'm Cooper Runstein, a software developer from Portland, OR. Currently I live in Eugene,
+                                OR while I attend the University of Oregon. I'm primarily interested in frontend development, but have taken an intrest in backend technologies as well. Right now React and Vue.js have captured my intrest.</p>
+                            <p class="text-block">I mostly work with Javascript and Python, though I'm interested in expanding into new lanaguages
                                 when the opportunity arises. Currently my main venture is
                                 <a href='http://spotcheckparking.com/'>SpotCheck Parking</a>, a machine vision startup.
                             I particularly enjoy testing and debugging code.</p>
                         </div>
                     </div>
                 </div>
+
                 <div id="work" class="work">
-                    <h2>My Work</h2>
+                    <h2 class="section-title">My Work</h2>
                     <ul>
                         <li v-for="project in projects">{{project.name}}
                             <a v-bind:href="project.src">{{project.projectTitle}}</a>
                         </li>
                     </ul>
                 </div>
+
                 <div id="skills" class="skills">
-                    <h2 class="skills-title">Skills</h2>
-                    <div class="skills-list-wrapper">
-                        <h3>My Skills</h3>
-                        <ul class="skills-list">
-                            <li v-on:click="show = 1" v-bind:class="{ isActive: show === 1 }">CSS and HTML including SASS, and CSS Grid, my personal favorite CSS tool.</li>
-                            <li v-on:click="show = 2" v-bind:class="{ isActive: show === 2 }">Javascript as a frontend including React and Vue, as well as a backend with Node and Express.</li>
-                            <li v-on:click="show = 3" v-bind:class="{ isActive: show === 3 }">Python, used with machine learning tools like Tensorflow and Keras, as well as backend Django.</li>
-                            <li v-on:click="show = 4" v-bind:class="{ isActive: show === 4 }">Database and server side tools including SQL and MongoDB.</li>
-                            <li v-on:click="show = 5" v-bind:class="{ isActive: show === 5 }">A whole host of developer tools: Git, Gulp, Webpack, Babel, PipEnv, and more.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="treehouse-wrapper">
-                        <div>
-                            <ul v-if="show === 1">
-                                <li><h3>CSS and HTML</h3></li>
-                                <li><p>I began learning CSS and HTML in fall 2017. I began with the base languages, and moved into more advanced areas quickly.</p></li>
-                                <li><p>I've used Bootstrap, Flexbox and Grid, though the new and modern Grid system is by far my favorite to work with.</p></li>
-                                <li><p>Recently I've picked up SASS basics to help build my style sheets quickly.</p></li>
+                    <h2 class="section-title" class="skills-title">Skills</h2>
+
+                    <div class="skills-body-wrapper">
+                        <div class="skills-list-wrapper">
+                            <h3>My Skills</h3>
+                            <ul class="skills-list">
+                                <li v-on:click="show = 1" v-bind:class="{ isActive: show === 1 }">CSS and HTML including SASS, and CSS Grid, my personal favorite CSS tool.</li>
+                                <li v-on:click="show = 2" v-bind:class="{ isActive: show === 2 }">Javascript as a frontend including React and Vue, as well as a backend with Node and Express.</li>
+                                <li v-on:click="show = 3" v-bind:class="{ isActive: show === 3 }">Python, used with machine learning tools like Tensorflow and Keras, as well as backend Django.</li>
+                                <li v-on:click="show = 4" v-bind:class="{ isActive: show === 4 }">Database and server side tools including SQL and MongoDB.</li>
+                                <li v-on:click="show = 5" v-bind:class="{ isActive: show === 5 }">A whole host of developer tools: Git, Gulp, Webpack, Babel, PipEnv, and more.</li>
                             </ul>
-                            <ul v-if="show === 2">
+                        </div>
+
+                        <div class="skills-descriptions">
+                            <div v-if="show === 1">
+                                <h3>CSS and HTML</h3>
+                                <p>I began learning CSS and HTML in fall 2017. I began with the base languages, and moved into more advanced areas quickly.</p>
+                                <p>I've used Bootstrap, Flexbox and Grid, though the new and modern Grid system is by far my favorite to work with.</p>
+                                <p>Recently I've picked up SASS basics to help build my style sheets quickly.</p>
+                            </div>
+                            <div v-if="show === 2">
                                 <h3>Javascript</h3>
-                                <li><p>I began learning Javascript around the same time as HTML and CSS and it quickly overtook Python as my favorite langauge.</p></li>
-                                <li><p>I've began using React and Vue as frotend technologies while experimenting with Node as a backend.</p></li>
-                                <li><p>Tensorflow.js has made my affection for JS even stronger and I have a few web-based machine learning projects planned out.</p></li>
-                            </ul>
+                                <p>I began learning Javascript around the same time as HTML and CSS and it quickly overtook Python as my favorite langauge.</p>
+                                <p>I've began using React and Vue as frotend technologies while experimenting with Node as a backend.</p>
+                                <p>Tensorflow.js has made my affection for JS even stronger and I have a few web-based machine learning projects planned out.</p>
+                            </div>
                             <div v-if="show === 3">
                                 <h3>Python</h3>
                                 <p>I began learning Python out of intrest in economic data science as a college Freshman, and instantly loved the langauge more than my own field of study.</p>
@@ -82,10 +83,10 @@
                                 <p>Tensorflow has made learning Machine Learning a breeze, and I love experimenting with audio and visual machine recognition.</p>
                             </div>
                             <div v-if="show === 4">
-                                   <h3>Database Querying</h3>
-                                   <p>I learned SQL alongside python while doing an economic research project, it was certainly not my favorite first time through.</p>
-                                   <p>Since then I've grown to appreciate SQL and the power it offers.</p>
-                                   <p>Recently I took a course on the NoSql technology MongoDB and found it easy and fun to use. </p>
+                                    <h3>Database Querying</h3>
+                                    <p>I learned SQL alongside python while doing an economic research project, it was certainly not my favorite first time through.</p>
+                                    <p>Since then I've grown to appreciate SQL and the power it offers.</p>
+                                    <p>Recently I took a course on the NoSql technology MongoDB and found it easy and fun to use. </p>
                             </div>
                             <div v-if="show === 5">
                                 <h3>Developer Tools</h3>
@@ -96,11 +97,10 @@
                                 <p>I mostly use Linux as my operating system, and have worked through the linux from scratch manual with a friend.</p>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
-            
-    
+
+            </div>
             <div class="footer">
                 <div class="contact">
                     <h3>Contact Me</h3>
@@ -108,12 +108,26 @@
                 </div>
                 <p>This Site Made with Vue.js</p>
             </div>
-        </div>
-    
+
+
 
     </div>
     <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
     <script src="../src/main.js" type="text/javascript"></script>
+    <script>
+        VueScrollTo.setDefaults({
+    container: "body",
+    duration: 500,
+    easing: "ease",
+    offset: 0,
+    cancelable: true,
+    onStart: false,
+    onDone: false,
+    onCancel: false,
+    x: false,
+    y: true
+})
+    </script>
 </body>
 
 </html>
