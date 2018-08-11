@@ -109,6 +109,7 @@ a:hover{
     flex-direction: row;
     justify-content: space-around;
     align-items: stretch;
+    min-height: 50vh;
 }
 .about-text p{
     max-width: 25em;
