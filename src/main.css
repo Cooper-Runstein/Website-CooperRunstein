@@ -1,0 +1,224 @@
+/*********Initial Styles***********/
+/**************************/
+/*Normalize edges*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Set base font size*/
+html{
+    font-size: 10px;
+}
+body{
+    color:  rgba(11, 236, 236, 0.74);
+    background-color: rgba(76, 80, 84, 0.955);
+    font-family: 'Josefin Sans', sans-serif;
+}
+/* Normalize links */
+a{
+    color: white;
+}
+a:hover{
+    color: rgb(212, 10, 20);
+}
+
+
+
+/*********Header***********/
+/**************************/
+.header {
+    width: 100vw;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    height: 10vh;
+    background-color: rgb(92, 95, 95);
+    z-index: 99;
+}
+
+.header h2{
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+.header nav{
+    margin-right: 1rem;
+}
+
+.header nav a{
+    font-size: 2.5rem;
+    padding-right: 1rem;
+}
+
+
+
+/*********Body***********/
+/**************************/
+
+/***General Body Styles***/
+.body{
+    position: relative;
+    top: 10vh;
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+}
+
+.text-block{
+    font-size: 2rem;
+    line-height: 150%;
+}
+.section-title{
+    font-size: 2.5rem;
+    padding-bottom: 3rem;
+}
+.about-me{
+    height: 90vh
+}
+.work, .skills{
+    height: 100vh;
+}
+.about-me, .work{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 5px dashed rgba(163, 157, 149, 0.918);
+}
+
+/********About**********/
+
+.about-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90vh;
+    width: 50vw;
+    padding-bottom: 10rem;
+
+}
+.about-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    min-height: 50vh;
+}
+.about-text p{
+    max-width: 25em;
+    display: inline-block;
+}
+
+/*******Work *******/
+.work ul{
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.work ul li{
+    font-size: 2rem;
+}
+
+/******* Skills *******/
+.skills{
+    border-bottom: 5px dashed rgba(163, 157, 149, 0.918);
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+
+}
+
+.skills-body-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.skills-list-wrapper{
+    max-width: 35vw;
+}
+.skills-list-wrapper h3{
+    font-size: 2.5rem;
+}
+
+.skills-list li{
+    font-size: 2rem;
+    list-style: circle;
+    list-style-position: inside;
+    padding-bottom: 1.5rem;
+}
+.skills-list li:hover{
+    cursor: pointer;
+}
+
+.skills-list:hover li:not(:hover){
+    opacity: .5;
+}
+
+.skills-descriptions{
+    max-width: 35vw;
+}
+
+.skills-descriptions div h3{
+    font-size: 2.5rem;
+}
+.skills-descriptions div p{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.response{
+    display: block;
+}
+
+
+/*********Footer***********/
+/**************************/
+
+.footer{
+    height: 20vh;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.footer div{
+    padding-left: 10vw;
+}
+
+.footer p{
+    padding-right: 10vw;
+}
+
+@media only screen and (max-width: 800px){
+    .about-text{
+        flex-direction: column;
+    }
+    .about-text p{
+        max-width: 90vw;
+    }
+    .skills{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 3fr;
+    }
+    .skills-title{
+        grid-column-end: 2;
+    }
+}
+
+.isActive{
+    font-weight: bold;
+    text-decoration: underline rgb(212, 10, 20);
+}
+
