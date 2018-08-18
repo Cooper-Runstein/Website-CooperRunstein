@@ -2,10 +2,15 @@ import React from 'react';
 
 const Project = (props) =>{
   return (
-    <div>
-      <span>{props.name}</span>
-      <span>{props.src}</span>
+    <div className='project-container'>
+      <h4>{props.name}</h4>
+      <div className='project-links'>
+      <a href={props.src}>Code</a>
+      {props.live ? <a href={props.Live}>live</a> : null}
+      </div>
       <span>{props.title}</span>
+      <p>{props.desciription}</p>
+
     </div>
   )
 }
@@ -15,9 +20,17 @@ class Projects extends React.Component{
     this.state = {
       projects: [
         {
+          name: "React Router Example",
+          src: 'https://github.com/Cooper-Runstein/Reactify-Coffee-Shop',
+          projectTitle: "Coffee Shop Application",
+          live: "https://boring-hypatia-eb85d2.netlify.com/menu/coffee",
+          desciription: "This is a Single Page Application ceated as a mock website when learning CSS, I modified it when learning React Router."
+        },
+        {
           name: "First React Project",
           src: 'https://github.com/Cooper-Runstein/NBA-App-Learn-React/tree/6984cc8b19e412b51d5d2299862ce2e8750e9067',
-          projectTitle: "NBA Stat Comparison"
+          projectTitle: "NBA Stat Comparison",
+          desciription: "This project uses the mySportsFeed API to get NBA player's statistics and compare them to other players. The project is built with React."
         },
         {
           name: "First AJAX Project",
@@ -44,7 +57,7 @@ class Projects extends React.Component{
   }
   render(){
     return(
-        <div>
+        <div className='projects-container main-comp-container'>
           <h3>Projects</h3>
           <div>
             {
@@ -54,6 +67,8 @@ class Projects extends React.Component{
                   name = { project.name }
                   src = { project.src }
                   title = { project.projectTitle }
+                  live = { project.live }
+                  desciription = { project.desciription }
                 />
               })
             }

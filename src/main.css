@@ -92,6 +92,9 @@ a:hover{
     border-bottom: 5px dashed rgba(163, 157, 149, 0.918);
 }
 
+.main-comp-container{
+  height: 100vh;
+}
 /********About**********/
 
 .about-content{
