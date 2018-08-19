@@ -21,8 +21,9 @@ class Skills extends React.Component {
           {
             title: 'CSS and HTML',
             lines: [
-              'I began learning CSS and HTML in fall 2017. I began with the base languages, and moved into more advanced areas quickly.',
-              'I\'ve used Bootstrap, Flexbox and Grid, though the new and modern Grid system is by far my favorite to work with.',
+              'I began learning CSS and HTML in fall 2017 as a result of trying Android development and realizing I enjoyed the UI aspect.',
+              'After learning native CSS I experimented with Bootstrap, Flexbox, Grid.',
+              'I mostly use a combonation of flex and grid today, these more modern tools ',
               'Recently I\'ve picked up SASS basics to help build my style sheets quickly.'
             ]
           },
@@ -71,15 +72,14 @@ class Skills extends React.Component {
 
     render(){
       return(
-        <div class="main-comp-container">
-          <div class="skills-list-wrapper">
+        <div className="main-comp-container skills-container">
+          <div className="skills-list-wrapper">
               <h3>My Skills</h3>
               <ul class="skills-list">
-                  <li onClick={()=> this.changeSelectedIndex(0)}>CSS and HTML including SASS, and CSS Grid, my personal favorite CSS tool.</li>
-                  <li onClick={()=> this.changeSelectedIndex(1)}>Javascript as a frontend including React and Vue, as well as a backend with Node and Express.</li>
-                  <li onClick={()=> this.changeSelectedIndex(2)}>Python, used with machine learning tools like Tensorflow and Keras, as well as backend Django.</li>
-                  <li onClick={()=> this.changeSelectedIndex(3)}>Database and server side tools including SQL and MongoDB.</li>
-                  <li onClick={()=> this.changeSelectedIndex(4)}>A whole host of developer tools: Git, Gulp, Webpack, Babel, PipEnv, and more.</li>
+                  {this.state.skillsDescriptions.map((skill, index) => <li
+                    className= {this.state.activeIndex === index ? 'active-skill' : 'inactive-skill'}
+                    onClick={()=>{this.setState({activeIndex: index})}}>
+                    {skill.title}</li>)}
               </ul>
           </div>
           <DisplayedSkill

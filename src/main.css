@@ -74,26 +74,27 @@ a:hover{
     line-height: 150%;
 }
 .section-title{
-    font-size: 2.5rem;
-    padding-bottom: 3rem;
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
 }
 .about-me{
     height: 90vh
 }
 .work, .skills{
-    height: 100vh;
+  height: 100vh;
 }
 .about-me, .work{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    border-bottom: 5px dashed rgba(163, 157, 149, 0.918);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 5px dashed rgba(163, 157, 149, 0.918);
 }
 
 .main-comp-container{
   height: 100vh;
+  border-bottom: 1px white solid;
 }
 /********About**********/
 
@@ -120,19 +121,73 @@ a:hover{
 }
 
 /*******Work *******/
-.work ul{
-    min-height: 55vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+.projects-container{
+
 }
-.work ul li{
-    font-size: 2rem;
+
+.projects-wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+
+.project-container{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.project-links{
+  margin-left: 30vw;
+  margin-right:30vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-container h4{
+  font-size: 3rem;
+}
+
+.forward{
+  height: 5vh;
+  width: 5vh;
+  position: absolute;
+  right: 5vw;
+  top: 250vh;
+  transition: padding .5s;
+}
+
+.back{
+  height: 5vh;
+  width: 5vh;
+  position: absolute;
+  left: 5vw;
+  top: 250vh;
+  transition: padding .5s;
+}
+
+.back:hover, .forward:hover{
+  cursor: pointer;
+}
+
+.back:hover{
+  padding-right: 1vw;
+}
+
+.forward:hover{
+  padding-left: 1vw;
 }
 
 /******* Skills *******/
+
+.skills-container{
+  display: flex;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
 .skills{
     border-bottom: 5px dashed rgba(163, 157, 149, 0.918);
     padding-top: 20vh;
@@ -146,10 +201,49 @@ a:hover{
     justify-content: flex-start;
 }
 .skills-list-wrapper{
-    max-width: 35vw;
+    width: 20vw;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    /* height: 35vh;
+
+    top: 32vh; */
 }
+
+.skills-list-wrapper h3{
+  padding-bottom: 5vh;
+}
+
+.active-skill-container{
+  width: 60vw;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}
+
+.active-skill-container ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  font-size: 2rem;
+}
+
+.active-skill-container ul li{
+  list-style: none;
+}
+
+.active-skill-container h4{
+  padding-bottom: 5vh;
+  font-size: 3rem;
+}
+
 .skills-list-wrapper h3{
     font-size: 2.5rem;
+}
+
+.skills-list{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .skills-list li{
@@ -157,6 +251,7 @@ a:hover{
     list-style: circle;
     list-style-position: inside;
     padding-bottom: 1.5rem;
+    float: left;
 }
 .skills-list li:hover{
     cursor: pointer;
@@ -225,3 +320,10 @@ a:hover{
     text-decoration: underline rgb(212, 10, 20);
 }
 
+
+
+
+
+.active-skill{
+  font-style: italic;
+}

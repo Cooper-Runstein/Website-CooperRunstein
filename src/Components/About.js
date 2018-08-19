@@ -3,7 +3,7 @@ import React from 'react';
 const About = (props)=>{
 
     return(
-        <div>About</div>
+        <div className="main-comp-container">About</div>
     )
 
 }
