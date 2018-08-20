@@ -393,11 +393,53 @@ a:hover{
     }
 }
 
+@media only screen and (max-height: 700px){
+  .about-container{
+    height: 150vh;
+  }
+  .about-info{
+    height: 120vh;
+  }
+  .about-container h2{
+    display: inline;
+  }
+}
+
+@media only screen and (max-height: 650px){
+  .main-comp-container{
+    height: 120vh;
+  }
+  .about-info{
+    height: 140vh;
+  }
+  .about-container{
+    height: 170;
+  }
+}
 .isActive{
     font-weight: bold;
     text-decoration: underline rgb(212, 10, 20);
 }
 
+@media only screen and (max-width: 500px){
+  .about-container{
+    text-align: center;
+  }
+  .about-info{
+    max-width: 80vw;
+    height: 180vh;
+  }
+
+  .skills-container{
+    height: 150vh;
+  }
+
+  .about-container{
+   height: 200vh;
+   padding-top: 5vh;
+  }
+
+}
 
 
 

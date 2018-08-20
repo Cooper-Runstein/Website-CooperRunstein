@@ -69,7 +69,7 @@ class Projects extends React.Component{
           src: 'https://github.com/Cooper-Runstein/Website-CooperRunstein',
           live: '#',
           projectTitle: "CooperRunstein.com",
-          desciription: 'This is probably the 4th iteration of personal website I\'ve desigined. I\'ve intentionally kept the styles minimal to not get boggd down on a site I\'m sure will be redone in a few months.'
+          desciription: 'This is probably the 4th iteration of a personal website I\'ve desigined. I\'ve intentionally kept the styles minimal to not get boggd down on a site I\'m sure will be redone in a few months.'
 
         },
         {
