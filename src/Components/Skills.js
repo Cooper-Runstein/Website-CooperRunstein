@@ -22,8 +22,8 @@ class Skills extends React.Component {
             title: 'CSS and HTML',
             lines: [
               'I began learning CSS and HTML in fall 2017 as a result of trying Android development and realizing I enjoyed the UI aspect.',
-              'After learning native CSS I experimented with Bootstrap, Flexbox, Grid.',
-              'I mostly use a combonation of flex and grid today, these more modern tools ',
+              'After learning native CSS I experimented with Bootstrap, Flexbox, and Grid.',
+              'I\'ve learned about the mobile first approach to web design and aim to make my projects work on screens of all sizes.',
               'Recently I\'ve picked up SASS basics to help build my style sheets quickly.'
             ]
           },
@@ -32,7 +32,16 @@ class Skills extends React.Component {
             lines: [
               'I began learning Javascript around the same time as HTML and CSS and it quickly overtook Python as my favorite langauge.',
               'I\'ve began using React and Vue as frotend technologies while experimenting with Node as a backend.',
-              'Tensorflow.js has made my affection for JS even stronger and I have a few web-based machine learning projects planned out.',
+              'Machine learning in Python initially set me on the programming track, and I\'m excited to try tensorflow.js in upcoming personal projects.'
+            ]
+          },
+          {
+            title: 'React',
+            lines: [
+                  'At the suggestion of my father, a software engineer, I began working with React in March of 2018.',
+                  'Since then I\'ve built several projects with it and truly love working with it.',
+                  'I\'ve used React Router, React Transition Groups, some Redux.',
+                  'I recently used the React Context API and am excited to explore the options it provides in the future.'
             ]
           },
           {
@@ -47,20 +56,21 @@ class Skills extends React.Component {
           {
             title: 'Database Querying',
             lines: [
-                'I learned SQL alongside python while doing an economic research project, it was certainly not my favorite first time through.',
-                'Since then I\'ve grown to appreciate SQL and the power it offers.',
-                'Recently I took a course on the NoSql technology MongoDB and found it easy and fun to use. ',
+                'Alongside Django and Node, I\'ve learned to use SQL to get and store data in databases.',
+                'Since first using it, I\'ve grown to appreciate SQL and the power it offers.',
+                'I\'ve used both PostgreSQL and MySQL',
+                'Recently I took a course on MongoDB and found it easy and fun to use. ',
               ]
           },
 
           {
             title: 'Developer Tools',
             lines: [
-                'Once I discoverd the ability to undo mistakes with Git, I began using it on every project almost daily.',
+                  'Once I discoverd the ability to undo mistakes with Git, I began using it on every project almost daily.',
                   'Gulp, Webpack, Browserify, Babel and many more libraries and tools have helped me manage and grow my projects.',
                   'Pipenv and NPM for python and JS respectively have made sharing and managing projects much easier.',
                   'I\'ve used numerous editors and IDEs, Atom, Webstorm and PyCharm to name a few. Today I mostly enjoy using Visual Studio Code.',
-                  'I mostly use Linux as my operating system, and have worked through the linux from scratch manual with a friend.',
+                  'I mostly use Linux as my operating system, and spent a few days working through the linux from scratch manual with a friend.',
             ]
           }
         ]
