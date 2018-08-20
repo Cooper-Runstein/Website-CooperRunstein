@@ -6,7 +6,7 @@ const DisplayedSkill = (props)=>{
     <div className='active-skill-container'>
       <h4>{activeSkill.title}</h4>
       <ul>
-        {activeSkill.lines.map(line => <li>{line}</li>)}
+        {activeSkill.lines.map((line, i) => <li key = {i}>{line}</li>)}
       </ul>
     </div>
   )
@@ -72,10 +72,10 @@ class Skills extends React.Component {
 
     render(){
       return(
-        <div className="main-comp-container skills-container">
+        <div className="main-comp-container skills-container" id='skills'>
           <div className="skills-list-wrapper">
               <h3>My Skills</h3>
-              <ul class="skills-list">
+              <ul className="skills-list">
                   {this.state.skillsDescriptions.map((skill, index) => <li
                     key = { index }
                     className= {this.state.activeIndex === index ? 'active-skill' : 'inactive-skill'}

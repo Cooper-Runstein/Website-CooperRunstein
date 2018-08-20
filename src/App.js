@@ -5,7 +5,9 @@ import './main.css';
 import { Header, Footer } from './Components/Static';
 import Main from './Components/Main';
 
+// import ReallySmoothScroll from 'really-smooth-scroll';
 
+// ReallySmoothScroll.shim();
 
 class App extends Component {
   constructor() {

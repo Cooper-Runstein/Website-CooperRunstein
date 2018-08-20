@@ -14,13 +14,13 @@ html{
 }
 body{
     color:  black;
-    background-color: white;
+    background-color: #ebe7e7;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 /* Normalize links */
 a{
-    color: white;
+    color: #ebe7e7;
 }
 a:hover{
     color: rgb(212, 10, 20);
@@ -48,7 +48,7 @@ a:hover{
   height: 5vh;
   color: black;
   background-color:  rgb(36, 39, 83);
-  border-bottom: white 1px solid;
+  border-bottom: #ebe7e7 1px solid;
   z-index: 99;
   width: 100vw;
   padding-left: 20vw;
@@ -57,15 +57,21 @@ a:hover{
   justify-content: space-evenly;
   align-items: center;
   color: #ebe7e7;
-  box-shadow: 1px 1px 15px white;
+  box-shadow: 1px 1px 15px #ebe7e7;
 }
 
 .header-nav a{
   color: #ebe7e7;
+  font-size: 2rem;
+  padding-right: 1rem;
 }
+
 .sticky{
   position: fixed;
   top: 0;
+}
+.sticky a{
+  font-size: 1.5rem;
 }
 .header h2{
     font-size: 3rem;
@@ -76,10 +82,7 @@ a:hover{
     margin-right: 1rem;
 }
 
-.header nav a{
-    font-size: 2.5rem;
-    padding-right: 1rem;
-}
+
 
 
 
@@ -102,21 +105,21 @@ a:hover{
 
 .main-comp-container{
   height: 100vh;
-  border-bottom: 1px white solid;
+  border-bottom: 1px #ebe7e7 solid;
 }
 /********About**********/
 
 .about-container{
+    padding-top: 10vh;
     width: 100%;
     background: rgb(89, 90, 107);
-    color: #fff;
-    border-bottom: #3f0444 5px solid;
+    color: #ebe7e7;
 
 }
 
 .about-container h2{
   font-size: 3rem;
-  padding-top: 15px;
+
 }
 
 .about-info{
@@ -152,11 +155,12 @@ a:hover{
 
 .project-container{
   height: 80vh;
-  display: flex;
+  width: 80vw;
+  display: inline-flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  /* margin-left: 10vw;
+  margin-right: 10vw; */
 }
 
 .project-links{
@@ -227,6 +231,32 @@ a:hover{
   text-shadow: 1px 1px 10px red;
 }
 
+.projects-wrapper span{
+  display: inline;
+  text-align: center;
+}
+
+
+.projectDisplay-leave{
+  opacity: 0;
+  /* transform: translateX(0) */
+}
+
+.projectDisplay-leave.projectDisplay-leave-active{
+  opacity: 0;
+  /* transform: translateX(0) */
+}
+
+.projectDisplay-enter{
+  opacity: 0;
+  /* transform: translateX(-100%); */
+}
+
+.projectDisplay-enter.projectDisplay-enter-active{
+  opacity: 1;
+  /* transform: translateX(0); */
+  transition: opacity .5s;
+}
 
 /******* Skills *******/
 
@@ -235,7 +265,7 @@ a:hover{
   padding-left: 10vw;
   padding-right: 10vw;
   background: rgb(36, 83, 80);
-  color: #fff;
+  color: #ebe7e7;
 }
 .skills{
     border-bottom: 5px dashed rgba(163, 157, 149, 0.918);
@@ -329,16 +359,15 @@ a:hover{
 /**************************/
 
 .footer{
-    border-top: 1px white solid;
-    background: white;
+    border-top: 1px #ebe7e7 solid;
+    background: #ebe7e7;
     height: 20vh;
-    padding-top: 10vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-size: 1.5rem;
-    color: #fff;
+    color: #ebe7e7;
     background: rgb(54, 54, 54);
 }
 
@@ -378,3 +407,6 @@ a:hover{
 .active-skill{
   font-style: italic;
 }
+
+
+

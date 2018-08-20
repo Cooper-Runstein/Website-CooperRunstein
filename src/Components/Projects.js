@@ -1,11 +1,12 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import forwardArrow from '../right-arrow.png';
 import backArrow from '../back.png';
 
 const Project = (props) =>{
   return (
-    <div className='project-container'>
+    <div className='project-container' key = {props.index}>
       <h3>{props.title}</h3>
       <h4>{props.name}</h4>
       <div className='project-links'>
@@ -75,7 +76,7 @@ class Projects extends React.Component{
   }
   render(){
     return(
-        <div className='projects-container main-comp-container'>
+        <div className='projects-container main-comp-container' id='projects'>
           <h3>Projects</h3>
           <div className='projects-wrapper'>
           <img
@@ -91,22 +92,34 @@ class Projects extends React.Component{
               }
               this.setState({activeIndex: newIndex})
             }}></img>
-            {
-              this.state.projects.map((project, index)=>{
-                if (this.state.activeIndex === index){
-                  return <Project
-                    key = { index }
-                    name = { project.name }
-                    src = { project.src }
-                    title = { project.projectTitle }
-                    live = { project.live }
-                    desciription = { project.desciription }
-                  />
-                }
+
+            <ReactCSSTransitionGroup
+              component = "span"
+              transitionName = "projectDisplay"
+              transitionEnterTimeout= {500}
+              transitionLeaveTimeout= {500}
+            >
+              {
+                this.state.projects.map((project, index)=>{
+                  if (this.state.activeIndex === index){
+                    return (
+                      <Project
+                        key = { index }
+                        index = {index}
+                        name = { project.name }
+                        src = { project.src }
+                        title = { project.projectTitle }
+                        live = { project.live }
+                        desciription = { project.desciription }
+                      />
+                    )
+                  }
 
 
-              })
-            }
+                })
+              }
+            </ReactCSSTransitionGroup>
+
             <img
               src={forwardArrow}
               alt='forward'
