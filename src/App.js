@@ -14,6 +14,23 @@ class App extends Component {
 
     }
   }
+
+  componentDidMount(){
+    window.onscroll = function() {
+      headerFunction();
+    };
+
+    var headerNav = document.querySelector(".header-nav");
+
+    function headerFunction() {
+      console.log('onScroll Called');
+      if (window.pageYOffset > 30) {
+        headerNav.classList.add("sticky");
+      } else {
+        headerNav.classList.remove("sticky");
+      }
+    }
+  }
   render() {
     return (
       <div className="App">
@@ -22,6 +39,7 @@ class App extends Component {
         <Footer />
       </div>
     )}
+
 }
 
 export default App;

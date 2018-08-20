@@ -77,6 +77,7 @@ class Skills extends React.Component {
               <h3>My Skills</h3>
               <ul class="skills-list">
                   {this.state.skillsDescriptions.map((skill, index) => <li
+                    key = { index }
                     className= {this.state.activeIndex === index ? 'active-skill' : 'inactive-skill'}
                     onClick={()=>{this.setState({activeIndex: index})}}>
                     {skill.title}</li>)}

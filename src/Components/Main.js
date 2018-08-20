@@ -10,7 +10,6 @@ const Main = () => {
       <About />
       <Skills />
       <Projects />
-      <Contact />
     </div>
   )
 }

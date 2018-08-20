@@ -9,8 +9,8 @@ const Project = (props) =>{
       <h3>{props.title}</h3>
       <h4>{props.name}</h4>
       <div className='project-links'>
-        <a href={props.src}>Code</a>
-        {props.live ? <a href={props.Live}>live</a> : null}
+        <a href={props.src} className='code-link'> {'{ get the code }'}  </a>
+        {props.live ? <a href={props.Live} className='live-link'>view it live</a> : null}
       </div>
 
       <p>{props.desciription}</p>
@@ -26,6 +26,7 @@ class Projects extends React.Component{
         {
           name: "Node/Express server and a React frontend",
           projectTitle: "SpotCheck Admin Tools",
+          src: 'https://bitbucket.org/spotcheckparkingsolutions/admin-tools/src/master/',
           desciription: "A set of administration tools to change the status of remote raspberry pi clients that run moterized vehicle detecion nueral networks. Uses the React Context API, React Router, and JSON web tokens to create a secure system for parking detection administration."
         },
         {
