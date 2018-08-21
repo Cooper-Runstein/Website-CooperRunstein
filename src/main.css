@@ -273,6 +273,7 @@ a:hover{
 }
 .skills-container div{
   display: flex;
+  height: 100%;
 }
 
 .skills-container h1{
