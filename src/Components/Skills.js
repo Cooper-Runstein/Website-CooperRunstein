@@ -83,8 +83,9 @@ class Skills extends React.Component {
     render(){
       return(
         <div className="main-comp-container skills-container" id='skills'>
+        <div>
+          <h1>My Skills</h1>
           <div className="skills-list-wrapper">
-              <h3>My Skills</h3>
               <ul className="skills-list">
                   {this.state.skillsDescriptions.map((skill, index) => <li
                     key = { index }
@@ -93,10 +94,11 @@ class Skills extends React.Component {
                     {skill.title}</li>)}
               </ul>
           </div>
-          <DisplayedSkill
-            skills = { this.state.skillsDescriptions }
-            activeIndex = { this.state.activeIndex }
-          />
+            <DisplayedSkill
+              skills = { this.state.skillsDescriptions }
+              activeIndex = { this.state.activeIndex }
+            />
+          </div>
         </div>
 
       )

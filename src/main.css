@@ -265,11 +265,25 @@ a:hover{
   background: rgb(36, 83, 80);
   color: #ebe7e7;
 }
-.skills{
-    border-bottom: 5px dashed rgba(163, 157, 149, 0.918);
-    padding-top: 20vh;
-    padding-bottom: 10vh;
+.skills-container div{
+  display: flex;
+}
 
+.skills-container h1{
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: calc(10vh -18px) auto 0 auto;
+  margin: auto;
+  height: 0px;
+  padding:  0 0 0 0;
+  font-size: 36px;
+}
+
+.skills-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .skills-body-wrapper{
@@ -288,11 +302,14 @@ a:hover{
   font-size: 3rem;
 }
 
-.active-skill-container{
+
+.active-skill-container {
   width: 60vw;
   margin-top: 20vh;
   margin-bottom: 20vh;
+  flex-direction: column;
 }
+
 
 .active-skill-container ul{
   display: flex;
@@ -301,9 +318,15 @@ a:hover{
   font-size: 2rem;
 }
 
+
 .active-skill-container ul li{
   list-style: none;
   padding-bottom: 1.5rem;
+
+}
+.active-skill{
+  background: white;
+  color: rgb(36, 83, 80);
 }
 
 .active-skill-container h4{
@@ -314,14 +337,17 @@ a:hover{
 .skills-list{
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: flex-start;
+  border: 20px white solid;
 }
 
 .skills-list li{
     font-size: 2rem;
-    list-style: circle;
+    list-style: none;
+    padding: 20px;
+    width: 100%;
     list-style-position: inside;
-    padding-bottom: 1.5rem;
     float: left;
 }
 .skills-list li:hover{
@@ -329,7 +355,7 @@ a:hover{
 }
 
 .skills-list:hover li:not(:hover){
-    opacity: .5;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .skills-descriptions{
@@ -440,6 +466,42 @@ a:hover{
 
 }
 
-.active-skill{
-  font-style: italic;
+.projects-wrapper{
+  min-height: 60vh;
+  border: 3px white solid;
+}
+
+a{
+  text-decoration: none;
+}
+@media only screen and (max-width: 650px){
+  .skills-container{
+    height: 200vw;
+  }
+  .skills-container div{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+  }
+  .active-skill-container{
+    margin: 0;
+  }
+  .skills-list-wrapper{
+    width: 100vw;
+
+    margin: 0;
+    padding-top: 10vw;
+  }
+
+  .skills-list-wrapper ul{
+    border: 0;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+
+  .skills-list-wrapper ul li{
+    display: inline;
+    float: none;
+  }
 }

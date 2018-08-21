@@ -91,7 +91,7 @@ class Projects extends React.Component{
   render(){
     return(
         <div className='projects-container main-comp-container' id='projects'>
-          <h3>Projects</h3>
+          <h1>Projects</h1>
           <div className='projects-wrapper'>
           <img
             src= { backArrow }
