@@ -377,22 +377,6 @@ a:hover{
     padding-right: 10vw;
 }
 
-@media only screen and (max-width: 800px){
-    .about-text{
-        flex-direction: column;
-    }
-    .about-text p{
-        max-width: 90vw;
-    }
-    .skills{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 3fr 3fr;
-    }
-    .skills-title{
-        grid-column-end: 2;
-    }
-}
-
 @media only screen and (max-height: 700px){
   .about-container{
     height: 150vh;
@@ -402,6 +386,10 @@ a:hover{
   }
   .about-container h2{
     display: inline;
+  }
+
+  .back, .forward{
+    top: 300vh;
   }
 }
 
@@ -414,6 +402,9 @@ a:hover{
   }
   .about-container{
     height: 170vh;
+  }
+  .back, .forward{
+    top: 360vh;
   }
 }
 .isActive{
@@ -432,11 +423,19 @@ a:hover{
 
   .skills-container{
     height: 150vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    justify-content: space-between;
   }
 
   .about-container{
    height: 200vh;
    padding-top: 5vh;
+  }
+
+  .back, .forward{
+    top: 400vh;
+
   }
 
 }
