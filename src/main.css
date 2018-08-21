@@ -413,7 +413,7 @@ a:hover{
     height: 140vh;
   }
   .about-container{
-    height: 170;
+    height: 170vh;
   }
 }
 .isActive{
@@ -441,12 +441,6 @@ a:hover{
 
 }
 
-
-
-
 .active-skill{
   font-style: italic;
 }
-
-
-
