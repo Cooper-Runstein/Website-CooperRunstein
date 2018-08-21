@@ -4,7 +4,7 @@ const About = (props)=>{
 
     return(
         <div className="main-comp-container about-container" id='about'>
-          <h2>About Me</h2>
+          <h2>Who Am I?</h2>
           <div className='about-info'>
             <p>I'm Cooper Runstein an Oregon based web developer. I began learning to code in college to suplement my economics major at Miami University in Ohio, and quickly found myself enjoying programming more than my degree program.</p>
             <p>After transfering to the University of Oregon in Eugene, I continued to practice programming every chance I could get. Two years after my initial infatuation, I've explored areas from machine learning to Android to web development, where I now spend most of my time. </p>

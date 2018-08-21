@@ -55,14 +55,14 @@ class Projects extends React.Component{
           src: 'https://github.com/Cooper-Runstein/NBA-App-Learn-React/tree/6984cc8b19e412b51d5d2299862ce2e8750e9067',
           projectTitle: "NBA Stat Comparison",
           live: 'https://quirky-meninsky-9fb61f.netlify.com/',
-          desciription: "This project uses the mySportsFeed API to get NBA player's statistics and compare them to other players. The project is one of the first I built with React that wasn't following a tutorial."
+          desciription: "This project uses the mySportsFeed API to get NBA player's statistics and compare them to other players. The project is one of the first I built with React that wasn't following a tutorial. As of Aug 21, 2018, the API has changed and searches don't work. They'll be back soon."
         },
         {
           name: "First AJAX Project",
           src: 'https://github.com/Cooper-Runstein/MLB-Players-App',
           projectTitle: "MLB Player Search App",
           live: 'https://quizzical-euler-a68aff.netlify.com/',
-          desciription: "This project uses the mySportsFeed API to get MLB player data. It was also one of the first projects I used CSS transitions and transforms in for more than a single feature."
+          desciription: "This project uses the mySportsFeed API to get MLB player data. It was also one of the first projects I used CSS transitions and transforms in for more than a single feature. As of Aug 21, 2018, the API has changed and searches don't work. They'll be back soon."
         },
         {
           name: "This Website's code",
@@ -91,7 +91,8 @@ class Projects extends React.Component{
   render(){
     return(
         <div className='projects-container main-comp-container' id='projects'>
-          <h1>Projects</h1>
+        <div>
+          <h1>What have I done?</h1>
           <div className='projects-wrapper'>
           <img
             src= { backArrow }
@@ -149,6 +150,7 @@ class Projects extends React.Component{
                 }
                 this.setState({activeIndex: newIndex})
                 }}></img>
+          </div>
           </div>
         </div>
     )

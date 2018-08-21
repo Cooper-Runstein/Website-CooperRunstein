@@ -140,10 +140,16 @@ a:hover{
 .projects-container{
   text-align: center;
   background-color: rgb(181, 181, 181);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
 }
 
-.projects-container h3{
-  padding-top: .5rem;
+
+
+.projects-container div h1{
+
   font-size: 3rem;
 }
 
@@ -475,6 +481,13 @@ a{
   text-decoration: none;
 }
 @media only screen and (max-width: 650px){
+  .header{
+    height: 30vh;
+  }
+  .header h1{
+    font-size: 36px;
+  }
+
   .skills-container{
     height: 275vw;
   }
@@ -494,14 +507,26 @@ a{
     padding-top: 5vw;
   }
 
+
   .skills-list-wrapper ul{
     border: 0;
     margin-top: 5vh;
     margin-bottom: 5vh;
   }
 
+
   .skills-list-wrapper ul li{
     display: inline;
     float: none;
+  }
+  .skills-list:hover li:not(:hover){
+    color: white;
+  }
+
+  .back, .forward{
+    top: 450vh;
+
+    height: 10vh;
+    width: 10vh;
   }
 }
