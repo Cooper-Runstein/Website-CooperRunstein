@@ -476,7 +476,7 @@ a{
 }
 @media only screen and (max-width: 650px){
   .skills-container{
-    height: 200vw;
+    height: 275vw;
   }
   .skills-container div{
     flex-direction: column;
@@ -486,18 +486,18 @@ a{
   }
   .active-skill-container{
     margin: 0;
+    width: 80vw;
   }
   .skills-list-wrapper{
     width: 100vw;
-
     margin: 0;
-    padding-top: 10vw;
+    padding-top: 5vw;
   }
 
   .skills-list-wrapper ul{
     border: 0;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
 
   .skills-list-wrapper ul li{
