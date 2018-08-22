@@ -104,7 +104,7 @@ a:hover{
 }
 
 .main-comp-container{
-  height: 100vh;
+  min-height: 100vh;
   border-bottom: 1px #ebe7e7 solid;
 }
 /********About**********/
@@ -126,7 +126,7 @@ a:hover{
   max-width: 60vw;
   margin: auto;
   font-size: 2rem;
-  height: 70vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -155,8 +155,10 @@ a:hover{
 
 .projects-wrapper{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   min-height: 70vh;
+  align-items: center;
 }
 
 .project-container{
@@ -187,22 +189,12 @@ a:hover{
   margin-right: 10vw;
 }
 
-
-.forward{
+.back, .forward{
   height: 5vh;
   width: 5vh;
-  position: absolute;
-  right: 5vw;
-  top: 250vh;
-  transition: padding .5s;
-}
-
-.back{
-  height: 5vh;
-  width: 5vh;
-  position: absolute;
-  left: 5vw;
-  top: 250vh;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   transition: padding .5s;
 }
 
@@ -410,67 +402,10 @@ a:hover{
     padding-right: 10vw;
 }
 
-@media only screen and (max-height: 700px){
-  .about-container{
-    height: 150vh;
-  }
-  .about-info{
-    height: 120vh;
-  }
-  .about-container h2{
-    display: inline;
-  }
 
-  .back, .forward{
-    top: 300vh;
-  }
-}
-
-@media only screen and (max-height: 650px){
-  .main-comp-container{
-    height: 120vh;
-  }
-  .about-info{
-    height: 140vh;
-  }
-  .about-container{
-    height: 170vh;
-  }
-  .back, .forward{
-    top: 360vh;
-  }
-}
 .isActive{
     font-weight: bold;
     text-decoration: underline rgb(212, 10, 20);
-}
-
-@media only screen and (max-width: 500px){
-  .about-container{
-    text-align: center;
-  }
-  .about-info{
-    max-width: 80vw;
-    height: 180vh;
-  }
-
-  .skills-container{
-    height: 150vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    justify-content: space-between;
-  }
-
-  .about-container{
-   height: 200vh;
-   padding-top: 5vh;
-  }
-
-  .back, .forward{
-    top: 400vh;
-
-  }
-
 }
 
 .projects-wrapper{
@@ -481,8 +416,12 @@ a:hover{
 a{
   text-decoration: none;
 }
+
 @media only screen and (max-width: 650px){
-  .header{
+  .main-comp-container{
+    min-height: 100vh;
+  }
+  /* .header{
     height: 30vh;
   }
   .header h1{
@@ -490,8 +429,9 @@ a{
   }
 
   .skills-container{
-    height: 275vw;
+    height: 275vh;
   }
+  */
   .skills-container div{
     flex-direction: column;
     align-items: center;
@@ -502,6 +442,7 @@ a{
     margin: 0;
     width: 80vw;
   }
+  /*
   .skills-list-wrapper{
     width: 100vw;
     margin: 0;
@@ -523,11 +464,7 @@ a{
   .skills-list:hover li:not(:hover){
     color: white;
   }
+   */
 
-  .back, .forward{
-    top: 450vh;
 
-    height: 10vh;
-    width: 10vh;
-  }
 }

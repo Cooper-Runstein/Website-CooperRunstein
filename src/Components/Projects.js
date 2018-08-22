@@ -108,6 +108,7 @@ class Projects extends React.Component{
               this.setState({activeIndex: newIndex})
             }}></img>
 
+
             {/* <ReactCSSTransitionGroup
               component = "span"
               transitionName = "projectDisplay"
@@ -135,9 +136,7 @@ class Projects extends React.Component{
                 })
               }
               </span>
-            {/* </ReactCSSTransitionGroup> */}
-
-            <img
+              <img
               src={forwardArrow}
               alt='forward'
               className = 'forward'
@@ -150,6 +149,9 @@ class Projects extends React.Component{
                 }
                 this.setState({activeIndex: newIndex})
                 }}></img>
+            {/* </ReactCSSTransitionGroup> */}
+
+
           </div>
           </div>
         </div>
