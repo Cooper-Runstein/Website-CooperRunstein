@@ -373,6 +373,16 @@ a:hover{
     display: block;
 }
 
+
+.skillsDisplay-enter{
+  opacity: 0;
+
+}
+
+.skillsDisplay-enter.skillsDisplay-enter-active{
+  opacity: 1;
+  transition: opacity .5s;
+}
 /*Contact*/
 .contact{
   height: 35vh;

@@ -31,6 +31,20 @@ class Projects extends React.Component{
           live: "https://boring-hypatia-eb85d2.netlify.com/menu/coffee",
           desciription: "This is a Single Page Application ceated as a mock website when I was learning CSS, I modified it when learning React Router."
         },
+	{
+          name: "First React Project",
+          src: 'https://github.com/Cooper-Runstein/NBA-App-Learn-React/tree/6984cc8b19e412b51d5d2299862ce2e8750e9067',
+          projectTitle: "NBA Stat Comparison",
+          live: 'https://quirky-meninsky-9fb61f.netlify.com/',
+          desciription: "This project uses the mySportsFeed API to get NBA player's statistics and compare them to other players. The project is one of the first I built with React that wasn't following a tutorial. As of Aug 21, 2018, the API has changed and searches don't work. They'll be back soon."
+        },
+	{
+          name: "First AJAX Project",
+          src: 'https://github.com/Cooper-Runstein/MLB-Players-App',
+          projectTitle: "MLB Player Search App",
+          live: 'https://quizzical-euler-a68aff.netlify.com/',
+          desciription: "This project uses the mySportsFeed API to get MLB player data. It was also one of the first projects I used CSS transitions and transforms in for more than a single feature. As of Aug 21, 2018, the API has changed and searches don't work. They'll be back soon."
+        },
         {
           name: "Node/Express server and a React frontend",
           projectTitle: "SpotCheck Admin Tools",
@@ -51,18 +65,10 @@ class Projects extends React.Component{
           desciription: "In progress application that creates a chart extending from now unitl a given retirement day with one's financial status."
         },
         {
-          name: "First React Project",
-          src: 'https://github.com/Cooper-Runstein/NBA-App-Learn-React/tree/6984cc8b19e412b51d5d2299862ce2e8750e9067',
-          projectTitle: "NBA Stat Comparison",
-          live: 'https://quirky-meninsky-9fb61f.netlify.com/',
-          desciription: "This project uses the mySportsFeed API to get NBA player's statistics and compare them to other players. The project is one of the first I built with React that wasn't following a tutorial. As of Aug 21, 2018, the API has changed and searches don't work. They'll be back soon."
-        },
-        {
-          name: "First AJAX Project",
-          src: 'https://github.com/Cooper-Runstein/MLB-Players-App',
-          projectTitle: "MLB Player Search App",
-          live: 'https://quizzical-euler-a68aff.netlify.com/',
-          desciription: "This project uses the mySportsFeed API to get MLB player data. It was also one of the first projects I used CSS transitions and transforms in for more than a single feature. As of Aug 21, 2018, the API has changed and searches don't work. They'll be back soon."
+          name: "Django Project",
+          src: 'https://github.com/Cooper-Runstein/django-baseball-cards',
+          projectTitle: "Baseball Card Collection App",
+          desciription: "In progress. Uses Django in Python to store and display info about my baseball cards collection."
         },
         {
           name: "This Website's code",

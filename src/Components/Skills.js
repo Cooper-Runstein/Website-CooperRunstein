@@ -1,13 +1,14 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const DisplayedSkill = (props)=>{
   const activeSkill = props.skills[props.activeIndex];
   return (
     <div className='active-skill-container'>
       <h4>{activeSkill.title}</h4>
-      <ul>
-        {activeSkill.lines.map((line, i) => <li key = {i}>{line}</li>)}
-      </ul>
+        <ul>
+          {activeSkill.lines.map((line, i) => <li key = {i}>{line}</li>)}
+        </ul>
     </div>
   )
 }
@@ -94,6 +95,7 @@ class Skills extends React.Component {
                     {skill.title}</li>)}
               </ul>
           </div>
+
             <DisplayedSkill
               skills = { this.state.skillsDescriptions }
               activeIndex = { this.state.activeIndex }
