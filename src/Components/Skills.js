@@ -84,8 +84,9 @@ class Skills extends React.Component {
     render(){
       return(
         <div className="main-comp-container skills-container" id='skills'>
+        <h1>What do I do?</h1>
         <div>
-          <h1>What do I do?</h1>
+
           <div className="skills-list-wrapper">
               <ul className="skills-list">
                   {this.state.skillsDescriptions.map((skill, index) => <li
