@@ -95,11 +95,17 @@ class Skills extends React.Component {
                     {skill.title}</li>)}
               </ul>
           </div>
-
-            <DisplayedSkill
-              skills = { this.state.skillsDescriptions }
-              activeIndex = { this.state.activeIndex }
-            />
+              <ReactCSSTransitionGroup
+                component = "div"
+                transitionName = "skillsDisplay"
+                transitionEnterTimeout= {5000}
+                transitionLeaveTimeout= {5000}
+              >
+              <DisplayedSkill
+                skills = { this.state.skillsDescriptions }
+                activeIndex = { this.state.activeIndex }
+              />
+            </ReactCSSTransitionGroup>
           </div>
         </div>
 

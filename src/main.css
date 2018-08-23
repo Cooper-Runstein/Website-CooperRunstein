@@ -263,18 +263,13 @@ a:hover{
   background: rgb(36, 83, 80);
   color: #ebe7e7;
 }
-.skills-container div{
+.skills-container > div{
   display: flex;
   height: 100%;
 }
 
 .skills-container h1{
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: calc(10vh -18px) auto 0 auto;
   margin: auto;
-  height: 0px;
   padding:  0 0 0 0;
   font-size: 36px;
 }
@@ -329,7 +324,6 @@ a:hover{
 }
 
 .active-skill-container h4{
-  padding-bottom: 5vh;
   font-size: 3rem;
 }
 
@@ -431,18 +425,36 @@ a{
   .main-comp-container{
     min-height: 100vh;
   }
+  .about-container{
+    padding-top: 5vh;
+  }
   /* .header{
     height: 30vh;
   }
   .header h1{
     font-size: 36px;
   }
-
-  .skills-container{
-    height: 275vh;
-  }
   */
-  .skills-container div{
+  .skills-container{
+    padding-top: 5vh;
+  }
+
+  .skills-list-wrapper{
+    width: 100vw;
+    margin: 5vh 0 5vh 0;
+
+  }
+  .skills-list{
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 30px white solid;
+  }
+
+
+  .skills-list li{
+    width: 40vw;
+  }
+  .skills-container > div{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
