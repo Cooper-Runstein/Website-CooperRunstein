@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 const DisplayedSkill = (props)=>{
   const activeSkill = props.skills[props.activeIndex];
@@ -39,7 +39,7 @@ class Skills extends React.Component {
           {
             title: 'React',
             lines: [
-                  'At the suggestion of my father, a software engineer, I began working with React in March of 2018.',
+                  'I began working with React in March of 2018.',
                   'Since then I\'ve built several projects with it and truly love working with it.',
                   'I\'ve used React Router, React Transition Groups, some Redux.',
                   'I recently used the React Context API and am excited to explore the options it provides in the future.'
@@ -96,17 +96,20 @@ class Skills extends React.Component {
                     {skill.title}</li>)}
               </ul>
           </div>
-              <ReactCSSTransitionGroup
+              <CSSTransitionGroup
                 component = "div"
                 transitionName = "skillsDisplay"
-                transitionEnterTimeout= {5000}
-                transitionLeaveTimeout= {5000}
+                transitionEnterTimeout= {300}
+                transitionLeaveTimeout = {300}
+                transitionAppear= {true}
+                transitionAppearTimeout= {300}
               >
               <DisplayedSkill
+                key = {this.state.activeIndex}
                 skills = { this.state.skillsDescriptions }
                 activeIndex = { this.state.activeIndex }
               />
-            </ReactCSSTransitionGroup>
+            </CSSTransitionGroup>
           </div>
         </div>
 

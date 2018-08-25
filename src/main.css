@@ -326,6 +326,7 @@ a:hover{
 
 .active-skill-container h4{
   font-size: 3rem;
+  padding-bottom: 2vh;
 }
 
 .skills-list{
@@ -370,14 +371,28 @@ a:hover{
 
 
 .skillsDisplay-enter{
-  opacity: 0;
+  color: rgba(255, 255, 255, 0)
 
 }
 
 .skillsDisplay-enter.skillsDisplay-enter-active{
-  opacity: 1;
-  transition: opacity .5s;
+  color: rgba(255, 255, 255, 1);
+  transition: color .3s;
 }
+
+.skillsDisplay-leave{
+  color: rgba(255, 255, 255, 0);
+  display: none;
+}
+
+.skillsDisplay-leave.skillsDisplay-exit-leave{
+  color: rgba(255, 255, 255, 0);
+  display: none;
+  transition: color .3s;
+}
+
+
+
 /*Contact*/
 .contact{
   height: 35vh;
