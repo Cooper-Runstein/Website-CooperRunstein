@@ -46,29 +46,34 @@ class Projects extends React.Component{
           desciription: "This project uses the mySportsFeed API to get MLB player data. It was also one of the first projects I used CSS transitions and transforms in for more than a single feature. As of Aug 21, 2018, the API has changed and searches don't work. They'll be back soon."
         },
         {
+          name: "Django Project",
+          src: 'https://github.com/Cooper-Runstein/django-baseball-cards',
+          projectTitle: "Baseball Card Collection App",
+          desciription: "In progress. Uses Django in Python to store and display info about my baseball cards collection."
+        },
+        {
           name: "Node/Express server and a React frontend",
           projectTitle: "SpotCheck Admin Tools",
           src: 'https://bitbucket.org/spotcheckparkingsolutions/admin-tools/src/master/',
           desciription: "A set of administration tools to change the status of remote raspberry pi clients that run moterized vehicle detecion nueral networks. Uses the React Context API, React Router, and JSON web tokens to create a secure system for parking detection administration."
         },
         {
-          name: "Vue Router based SPA",
-          projectTitle: "SpotCheckParking.com",
-          src: '',
-          live: 'http://spotcheckparking.com/',
-          desciription: "The official SpotCheck Parking Solutions website, still under construction."
+          name: "Python And Requests API/Web Crawler Project",
+          src: 'https://github.com/Cooper-Runstein/Python-Baseball-Best-Player-Finder',
+          projectTitle: "Command Line MLB players App",
+          desciription: "Uses Beautiful Soup to get Team Abbreviations, and Requests to make calls to an API allowing a user to compare the best players on different teams and positions."
+        },
+        {
+          name: "PHP Laravel/Eloquent Project",
+          projectTitle: "TODO list",
+          src: 'https://github.com/Cooper-Runstein/Laravel-Todo-List',
+          desciription: "A practice project using Laravel and Eloquent, in progress."
         },
         {
           name: "React Project",
           src: 'https://github.com/Cooper-Runstein/React-Personal-Finance-App',
           projectTitle: "Personal Finance App",
           desciription: "In progress application that creates a chart extending from now unitl a given retirement day with one's financial status."
-        },
-        {
-          name: "Django Project",
-          src: 'https://github.com/Cooper-Runstein/django-baseball-cards',
-          projectTitle: "Baseball Card Collection App",
-          desciription: "In progress. Uses Django in Python to store and display info about my baseball cards collection."
         },
         {
           name: "This Website's code",

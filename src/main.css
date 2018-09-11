@@ -134,6 +134,7 @@ a:hover{
 }
 
 .about-info p{
+  padding-bottom: 5px;
   border-bottom: 1px #3f0444 solid;
 }
 
@@ -271,7 +272,7 @@ a:hover{
 
 .skills-container h1{
   margin: auto;
-  padding:  0 0 0 0;
+  padding:  4vh 0 0 0;
   font-size: 36px;
 }
 
