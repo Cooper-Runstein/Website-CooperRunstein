@@ -1,11 +1,11 @@
 import React from "react";
 
-import "./Header.scss";
+import { styles } from "./Header.css";
 
 const Header = () => {
   return (
     <React.Fragment>
-      <nav className="nav-container" style={{ maxWidth: "100vw" }}>
+      <nav className="nav-container header-nav" style={{ maxWidth: "100vw" }}>
         <a href="#about">about</a>
         <a href="#skills">skills</a>
         <a href="#projects">projects</a>

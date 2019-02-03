@@ -1,4 +1,4 @@
-.header {
+/* .header {
   width: 100vw;
   height: 30px;
   display: flex;
@@ -10,7 +10,7 @@
   background-color: rgb(36, 39, 83);
   z-index: 99;
   color: #ebe7e7;
-}
+} */
 .header-nav {
   height: 5vh;
   color: black;
