@@ -1,0 +1,50 @@
+.header {
+  width: 100vw;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+  height: 10vh;
+  background-color: rgb(36, 39, 83);
+  z-index: 99;
+  color: #ebe7e7;
+}
+.header-nav {
+  height: 5vh;
+  color: black;
+  background-color: rgb(36, 39, 83);
+  border-bottom: #ebe7e7 1px solid;
+  z-index: 99;
+  width: 100vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #ebe7e7;
+  box-shadow: 1px 1px 15px #ebe7e7;
+}
+
+.header-nav a {
+  color: #ebe7e7;
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+.sticky a {
+  font-size: 1.5rem;
+}
+.header h2 {
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+
+.header nav {
+  margin-right: 1rem;
+}

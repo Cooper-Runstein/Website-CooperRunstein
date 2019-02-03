@@ -1,0 +1,6 @@
+.about-info {
+  width: 60%;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+}

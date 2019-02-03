@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "mustard-ui": "^0.0.8",
+    "node-sass": "^4.11.0",
     "react": "^16.4.2",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.4.2",
