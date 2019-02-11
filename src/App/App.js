@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "..assets/App.css";
 import { Header, Footer } from "./Components/Static";
 import Main from "./Components/Main";
 

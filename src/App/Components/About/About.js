@@ -16,10 +16,10 @@ const About = props => {
         <p className="panel">
           During those two years I've gone from learning the basics of Python to
           exploring functional programming with Haskell, I've dabbled in PHP and
-          Java, and taken a class in taught in C++. I've written scripts in Go
-          and C, and even taken a course that touched on Assembly. At the end of
-          the day, I find myself writting JavaScript the most, both at work and
-          at home.
+          Java, and taken a class taught in C++. I've written scripts in Go and
+          C, and even taken a course that touched on Assembly. At the end of the
+          day, I find myself writting JavaScript the most, both at work and at
+          home.
         </p>
         <p className="panel">
           I ended up exploring web development when attempting to build and

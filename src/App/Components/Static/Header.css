@@ -14,7 +14,7 @@
 .header-nav {
   height: 5vh;
   color: black;
-  background-color: rgb(36, 39, 83);
+  background-color: #ffc107;
   border-bottom: #ebe7e7 1px solid;
   z-index: 99;
   width: 100vw;
@@ -29,16 +29,17 @@
 
 .header-nav a {
   color: #ebe7e7;
-  font-size: 2rem;
+  font-size: 16px;
   padding-right: 1rem;
 }
 
 .sticky {
+  background-color: #757575;
   position: fixed;
   top: 0;
 }
 .sticky a {
-  font-size: 1.5rem;
+  color: #4caf50;
 }
 .header h2 {
   font-size: 3rem;
