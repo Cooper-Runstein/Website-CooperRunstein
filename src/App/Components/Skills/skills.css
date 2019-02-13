@@ -1,0 +1,9 @@
+.skillsList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skillsList li:hover {
+  cursor: pointer;
+}

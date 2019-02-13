@@ -1,0 +1,17 @@
+.forward,
+.back {
+  max-height: 20px;
+  max-width: 20px;
+}
+.mainContentWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.mainPanel {
+  width: 60vw;
+  height: 45vh;
+}

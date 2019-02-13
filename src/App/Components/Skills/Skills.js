@@ -1,6 +1,8 @@
 import React from "react";
 import { CSSTransitionGroup } from "react-transition-group";
 
+import styles from "./skills.css";
+
 const DisplayedSkill = props => {
   const activeSkill = props.skills[props.activeIndex];
   return (
@@ -91,7 +93,7 @@ class Skills extends React.Component {
         <h1>What do I do?</h1>
         <div>
           <div className="skills-list-wrapper">
-            <ul className="skills-list">
+            <ul className={styles.skillsList}>
               {this.state.skillsDescriptions.map((skill, index) => (
                 <li
                   key={index}

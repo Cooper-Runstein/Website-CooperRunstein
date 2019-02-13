@@ -1,11 +1,20 @@
 import React from "react";
 
-import { styles } from "./Header.css";
+import classnames from "classnames";
 
-const Header = () => {
+import styles from "./Header.css";
+
+const Header = ({ headerSticky }) => {
   return (
     <React.Fragment>
-      <nav className="nav-container header-nav" style={{ maxWidth: "100vw" }}>
+      <nav
+        className={classnames(
+          "header-nav",
+          styles.header,
+          headerSticky && styles.sticky
+        )}
+        style={{ maxWidth: "100vw" }}
+      >
         <a href="#about">about</a>
         <a href="#skills">skills</a>
         <a href="#projects">projects</a>

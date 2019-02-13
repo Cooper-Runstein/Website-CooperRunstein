@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "..assets/App.css";
 import { Header, Footer } from "./Components/Static";
 import Main from "./Components/Main";
 
@@ -8,23 +7,24 @@ import smoothScroll from "./scroll.js";
 class App extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      headerSticky: false
+    };
+  }
+
+  headerFunction() {
+    var headerNav = document.querySelector(".header-nav");
+    console.log("onScroll Called");
+    if (window.pageYOffset > 30) {
+      this.state.headerSticky === false &&
+        this.setState({ headerSticky: true });
+    } else {
+      this.setState({ headerSticky: false });
+    }
   }
 
   componentDidMount() {
-    window.onscroll = function() {
-      headerFunction();
-    };
-
-    function headerFunction() {
-      var headerNav = document.querySelector(".header-nav");
-      console.log("onScroll Called");
-      if (window.pageYOffset > 30) {
-        headerNav.classList.add("sticky");
-      } else {
-        headerNav.classList.remove("sticky");
-      }
-    }
+    window.onscroll = () => this.headerFunction();
 
     let about = document.getElementById("about");
     let skills = document.getElementById("skills");
@@ -49,10 +49,11 @@ class App extends Component {
       smoothScroll(contact, 300, "easeOutQuad")
     );
   }
+
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header headerSticky={this.state.headerSticky} />
         <Main />
         <Footer />
       </div>

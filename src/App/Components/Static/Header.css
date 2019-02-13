@@ -27,6 +27,20 @@
   box-shadow: 1px 1px 15px #ebe7e7;
 }
 
+.header {
+  height: 5vh;
+  color: black;
+  background-color: #ffc107;
+  box-shadow: 1px 1px 15px #ebe7e7;
+  z-index: 99;
+  width: 100vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .header-nav a {
   color: #ebe7e7;
   font-size: 16px;
@@ -40,12 +54,4 @@
 }
 .sticky a {
   color: #4caf50;
-}
-.header h2 {
-  font-size: 3rem;
-  margin-left: 1rem;
-}
-
-.header nav {
-  margin-right: 1rem;
 }
