@@ -1,10 +1,20 @@
 import React from "react";
 
+import classnames from "classnames";
+
 import "./About.css";
+
+import gloablStyles from "../../../assets/App.css";
 
 const About = props => {
   return (
-    <div className="container about-container" id="about">
+    <div
+      className={classnames(
+        "container about-container",
+        gloablStyles.container
+      )}
+      id="about"
+    >
       <h2>Who Am I?</h2>
       <div className="about-info">
         <p className="panel">
