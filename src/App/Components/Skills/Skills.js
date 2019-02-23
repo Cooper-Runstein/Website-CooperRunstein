@@ -3,6 +3,10 @@ import { CSSTransitionGroup } from "react-transition-group";
 
 import styles from "./skills.css";
 
+import classnames from "classnames";
+
+import gloablStyles from "../../../assets/App.css";
+
 const DisplayedSkill = props => {
   const activeSkill = props.skills[props.activeIndex];
   return (
@@ -29,15 +33,15 @@ class Skills extends React.Component {
           title: "CSS and HTML",
           lines: [
             "I began learning CSS and HTML in fall 2017 as a result of trying Android development and realizing I enjoyed the UI aspect.",
-            "After learning native CSS I experimented with Bootstrap, Flexbox, and Grid.",
-            "I've learned about the mobile first approach to web design and aim to make my projects work on screens of all sizes.",
-            "Recently I've picked up SASS basics to help build my style sheets quickly."
+            "After learning native CSS I experimented with Bootstrap, and newer features like Flexbox, and Grid.",
+            "In theory, I like to use a mobile first approach, in practice, this rarely happens on personal projects.",
+            "My new favorite way to apply styles is SASS modules in React apps, something I picked up at work."
           ]
         },
         {
           title: "Javascript",
           lines: [
-            "I began learning Javascript around the same time as HTML and CSS and it quickly overtook Python as my favorite langauge.",
+            "I began learning Javascript around the same time as HTML and CSS, today I enjoy writing JS second only to Haskell.",
             "I've began using React and Vue as frotend technologies while experimenting with Node as a backend.",
             "Machine learning in Python initially set me on the programming track, and I'm excited to try tensorflow.js in upcoming personal projects."
           ]
@@ -57,17 +61,12 @@ class Skills extends React.Component {
             "I began learning Python out of intrest in economic data science as a college Freshman, and instantly loved the langauge more than my own field of study.",
             "Python turned programming from a hobby to a passion; the human-readable syntax and concise nature of the langauge has caused me to explore most new programming concepts through python.",
             "Django was the first backend framework I learned, and the formed the base of my server-side knowledge",
-            "Tensorflow has made learning Machine Learning a breeze, and I love experimenting with audio and visual machine recognition."
+            "Tensorflow has made learning Machine Learning a breeze, and I love experimenting with audio and visual machine recognition. I took a college course in the subject to better understand the math."
           ]
         },
         {
-          title: "Database Querying",
-          lines: [
-            "Alongside Django and Node, I've learned to use SQL to get and store data in databases.",
-            "Since first using it, I've grown to appreciate SQL and the power it offers.",
-            "I've used both PostgreSQL and MySQL",
-            "Recently I took a course on MongoDB and found it easy and fun to use. "
-          ]
+          title: "Backend",
+          lines: ["I've used both SQL and NoSQL databases, and "]
         },
 
         {
@@ -89,9 +88,12 @@ class Skills extends React.Component {
 
   render() {
     return (
-      <div className="container" id="skills">
+      <div
+        className={classnames("container", gloablStyles.container)}
+        id="skills"
+      >
         <h1>What do I do?</h1>
-        <div>
+        <div className={styles.mainWrapper}>
           <div className="skills-list-wrapper">
             <ul className={styles.skillsList}>
               {this.state.skillsDescriptions.map((skill, index) => (
@@ -111,20 +113,11 @@ class Skills extends React.Component {
               ))}
             </ul>
           </div>
-          <CSSTransitionGroup
-            component="div"
-            transitionName="skillsDisplay"
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={300}
-            transitionAppear={true}
-            transitionAppearTimeout={300}
-          >
-            <DisplayedSkill
-              key={this.state.activeIndex}
-              skills={this.state.skillsDescriptions}
-              activeIndex={this.state.activeIndex}
-            />
-          </CSSTransitionGroup>
+          <DisplayedSkill
+            key={this.state.activeIndex}
+            skills={this.state.skillsDescriptions}
+            activeIndex={this.state.activeIndex}
+          />
         </div>
       </div>
     );

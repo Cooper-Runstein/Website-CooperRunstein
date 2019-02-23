@@ -1,9 +1,15 @@
 .skillsList {
+  border-bottom: 1px rgb(185, 179, 179) solid;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 16px;
 }
 
 .skillsList li:hover {
   cursor: pointer;
+}
+
+.mainWrapper {
+  width: 100%;
 }
