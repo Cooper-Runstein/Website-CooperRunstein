@@ -71,13 +71,7 @@ class Skills extends React.Component {
 
         {
           title: "Developer Tools",
-          lines: [
-            "Once I discoverd the ability to undo mistakes with Git, I began using it on every project almost daily.",
-            "Gulp, Webpack, Browserify, Babel and many more libraries and tools have helped me manage and grow my projects.",
-            "Pipenv and NPM for python and JS respectively have made sharing and managing projects much easier.",
-            "I've used numerous editors and IDEs, Atom, Webstorm and PyCharm to name a few. Today I mostly enjoy using Visual Studio Code.",
-            "I mostly use Linux as my operating system, and spent a few days working through the linux from scratch manual with a friend."
-          ]
+          lines: ["I've been using git for over a year, and "]
         }
       ]
     };
